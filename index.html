@@ -1,47 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<title>AI College Helper</title>
+
+<title>AI Campus Assistant</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<div class="container">
+<header>
 
-<h1>🎓 AI College Helper</h1>
+<h1>AI Campus Assistant</h1>
 
-<div class="tabs">
+<button onclick="toggleDark()">🌙 Dark Mode</button>
+
+<button onclick="login()">Login with Google</button>
+
+</header>
+
+
+<nav>
+
 <button onclick="openTab('chat')">AI Chatbot</button>
-<button onclick="openTab('fake')">Fake News Detector</button>
-</div>
 
-<div id="chat" class="tabcontent">
+<button onclick="openTab('news')">Fake News Detector</button>
+
+<button onclick="openTab('planner')">Study Planner</button>
+
+</nav>
+
+
+<!-- CHATBOT -->
+
+<section id="chat" class="tab">
+
+<h2>AI Chatbot</h2>
 
 <div id="chatbox"></div>
 
-<input type="text" id="userInput" placeholder="Ask your question...">
+<input id="userInput" placeholder="Ask something...">
+
 <button onclick="sendMessage()">Send</button>
 
-</div>
+<button onclick="startVoice()">🎤</button>
+
+</section>
 
 
-<div id="fake" class="tabcontent">
+<!-- FAKE NEWS -->
 
-<h2>Fake News Detection</h2>
+<section id="news" class="tab">
 
-<textarea id="newsInput" placeholder="Paste news headline or article"></textarea>
+<h2>Fake News Detector</h2>
 
-<button onclick="checkNews()">Analyze</button>
+<textarea id="newsText" placeholder="Paste news text"></textarea>
 
-<p id="result"></p>
+<button onclick="analyzeNews()">Analyze</button>
 
-</div>
+<p id="score"></p>
 
-</div>
+</section>
+
+
+<!-- STUDY PLANNER -->
+
+<section id="planner" class="tab">
+
+<h2>Study Planner</h2>
+
+<input id="taskInput" placeholder="Enter task">
+
+<button onclick="addTask()">Add Task</button>
+
+<ul id="taskList"></ul>
+
+</section>
+
 
 <script src="script.js"></script>
+<script src="chatbot.js"></script>
+<script src="news.js"></script>
+<script src="planner.js"></script>
+<script src="auth.js"></script>
 
 </body>
+
 </html>
