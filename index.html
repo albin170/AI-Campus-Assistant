@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI College Helper</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎓 AI College Helper</h1>
+
+<div class="tabs">
+<button onclick="openTab('chat')">AI Chatbot</button>
+<button onclick="openTab('fake')">Fake News Detector</button>
+</div>
+
+<div id="chat" class="tabcontent">
+
+<div id="chatbox"></div>
+
+<input type="text" id="userInput" placeholder="Ask your question...">
+<button onclick="sendMessage()">Send</button>
+
+</div>
+
+
+<div id="fake" class="tabcontent">
+
+<h2>Fake News Detection</h2>
+
+<textarea id="newsInput" placeholder="Paste news headline or article"></textarea>
+
+<button onclick="checkNews()">Analyze</button>
+
+<p id="result"></p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
